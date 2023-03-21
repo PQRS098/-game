@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap By SKILLHUB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
+</head>
+<style>
+    .box {
+        height: 150px;
+        width: 100%;
+        border: 2px solid gray;
+        margin-top: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div class="container" id="playerCard">
+        <div class="row">
+            <div class="col-sm-6 offset-sm-3">
+                <div class="card">
+                    <div class="card-header">Enetr Names</div>
+                    <div class="card-body">
+                        <input id="p1" type="text" placeholder="Enter Name" class="form-control"><br>
+                        <input id="p2" type="text" placeholder="Enter Name" class="form-control"><br>
+                        <button class="btn btn-primary w-100" onclick="startGame()">Start Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container my-5" id="output"></div>
+    <div class="container d-none" id="gameCard">
+        <div class="row">
+            <div class="col-sm-8 offset-sm-2">
+                <div class="card">
+                    <div class="card-header">Tic Tac Toe</div>
+                    <div class="card-body">
+                        <!-- .row>.col-sm-3*4>.card>.card-body>.d-flex.justify-content-between>h6+strong -->
+                        <div class="row">
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 id="player1">player1</h6>
+                                            <strong id="player1WinCount">0</strong>
+                                        </div>
+                                        <!-- .row>col-4*9>{$} -->
+                                        <!-- .row>col-4*9>{$} -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <h6 id="player2">player2</h6>
+                                            <strong id="player2WinCount">0</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <h6>Draw</h6>
+                                            <strong id="drawCount">0</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-3">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between">
+                                            <h6>Total</h6>
+                                            <strong id="totalCount">0</strong>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="box" onclick="game('b1')" id="b1">1</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="box" onclick="game('b2')" id="b2">2</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="box" onclick="game('b3')" id="b3">3</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="box" onclick="game('b4')" id="b4">4</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="box" onclick="game('b5')" id="b5">5</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="box" onclick="game('b6')" id="b6">6</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="box" onclick="game('b7')" id="b7">7</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="box" onclick="game('b8')" id="b8">8</div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="box" onclick="game('b9')" id="b9">9</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>
